@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { Title } from '@mantine/core';
-import EmployeesList from '@/components/EmployeesList/EmployeesList';
+import EmployeesList from '@/components/EmployeesTable/EmployeesTable';
 import { Employee } from '@/types/types';
 
 export function HomePage() {
