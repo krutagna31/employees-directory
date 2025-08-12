@@ -1,8 +1,8 @@
 # Employees Directory
 
-A project which fetches data using tanstack query to fetch data and mantine ui to display it
+A project which fetches data using TanStack Query and displays it using Mantine UI.
 
-## Installation Guide 
+## Installation Guide
 
 ### Clone the Repository
 
