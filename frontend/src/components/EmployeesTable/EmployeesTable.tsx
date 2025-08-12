@@ -1,6 +1,6 @@
 import { Table } from '@mantine/core';
 import { Employee } from '@/types/types';
-import classes from "./EmployeesList.module.css";
+import classes from "./EmployeesTable.module.css";
 
 interface EmployeesListProps {
   employees: Employee[];
