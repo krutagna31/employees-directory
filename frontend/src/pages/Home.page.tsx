@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Flex, Pagination, Title } from '@mantine/core';
 import EmployeesList from '@/components/EmployeesTable/EmployeesTable';
 import { Employee } from '@/types/types';
+import BuggyComponent from '@/components/BuggyComponent';
 
 const chunk = <T,>(items: T[], size: number): T[][] => {
   if (items.length === 0) {
@@ -38,6 +39,7 @@ export function HomePage() {
 
   return (
     <>
+      <BuggyComponent />
       <Title ta="center" mb="lg">
         Employees Directory
       </Title>
