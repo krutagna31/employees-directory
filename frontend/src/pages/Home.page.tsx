@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Flex, Pagination } from '@mantine/core';
 import EmployeesList from '@/components/EmployeesList/EmployeesList';
 import Header from '@/components/Header/Header';
 import { Employee, UsersPerPage } from '@/types/types';
@@ -19,7 +18,7 @@ const chunk = <T,>(items: T[], size: number): T[][] => {
 export function HomePage() {
   const { data, isPending, error } = useQuery<Employee[]>({
     queryKey: ['employees'],
-    queryFn: () => fetch('http://localhost:3000/api/employees').then((res) => res.json()),
+    queryFn: () => fetch('https://employees-directory.onrender.com/api/employees').then((res) => res.json()),
   });
   const [usersPerPage, setUsersPerPage] = useState<UsersPerPage>(10);
 
@@ -28,7 +27,7 @@ export function HomePage() {
   };
 
   if (isPending) {
-    return <h2>Loading...</h2>;
+    return <p>Loading...</p>;
   }
 
   if (error) {

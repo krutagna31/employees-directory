@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Container, Flex, Select, Title } from '@mantine/core';
 import { UsersPerPage } from '@/types/types';
 
