@@ -18,7 +18,7 @@ const chunk = <T,>(items: T[], size: number): T[][] => {
 export function HomePage() {
   const { data, isPending, error } = useQuery<Employee[]>({
     queryKey: ['employees'],
-    queryFn: () => fetch('https://employees-directory.onrender.com/api/employees').then((res) => res.json()),
+    queryFn: () => fetch('http://localhost:3000/api/employees').then((res) => res.json()),
   });
   const [usersPerPage, setUsersPerPage] = useState<UsersPerPage>(10);
 
@@ -27,7 +27,7 @@ export function HomePage() {
   };
 
   if (isPending) {
-    return <p>Loading...</p>;
+    return <h2>Loading...</h2>;
   }
 
   if (error) {
