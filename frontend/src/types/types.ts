@@ -4,3 +4,5 @@ export interface Employee {
   department: string;
   email: string;
 }
+
+export type UsersPerPage = 5 | 10 | 15 | 20;
